@@ -52,6 +52,25 @@
             text-decoration: underline;
         }
 
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
         .header-info {
             margin-bottom: 30px;
         }
@@ -145,21 +164,42 @@
             color: #666;
             font-size: 14px;
         }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .header-info p {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Lorenzo De Tomasi</h1>
-    
-    <div class="header-info">
-        <p>PhD Candidate, University of L'Aquila</p>
-        <p>Head of Core Platforms, SIAE</p>
-        <p style="margin-top: 10px;">
-            <a href="mailto:lorenzo.detomasi@outlook.com">Email</a> • 
-            <a href="https://www.linkedin.com/in/lorenzo-de-tomasi/">LinkedIn</a> • 
-            <a href="https://scholar.google.com/citations?user=XMmpuhYAAAAJ&hl=it">Google Scholar</a> • 
-            <a href="https://orcid.org/0009-0000-1136-9629">ORCID</a> • 
-            <a href="https://github.com/lodetomasi">GitHub</a>
-        </p>
+    <div class="header-container">
+        <img src="1748445935758.jpeg" alt="Lorenzo De Tomasi" class="profile-photo">
+        <div class="header-content">
+            <h1>Lorenzo De Tomasi</h1>
+            <div class="header-info">
+                <p>PhD Candidate, University of L'Aquila</p>
+                <p>Head of Core Platforms, SIAE</p>
+                <p style="margin-top: 10px;">
+                    <a href="mailto:lorenzo.detomasi@outlook.com">Email</a> • 
+                    <a href="https://www.linkedin.com/in/lorenzo-de-tomasi/">LinkedIn</a> • 
+                    <a href="https://scholar.google.com/citations?user=XMmpuhYAAAAJ&hl=it">Google Scholar</a> • 
+                    <a href="https://orcid.org/0009-0000-1136-9629">ORCID</a> • 
+                    <a href="https://github.com/lodetomasi">GitHub</a>
+                </p>
+            </div>
+        </div>
     </div>
 
     <h2>About me</h2>
@@ -190,8 +230,7 @@
         <div class="publication-authors">Lorenzo De Tomasi, Claudio Di Sipio, Antinisca Di Marco, Phuong T. Nguyen</div>
         <div class="publication-venue">EASE 2025 - International Conference on Evaluation and Assessment in Software Engineering</div>
         <div class="publication-links">
-            <a href="https://arxiv.org/abs/2504.14024">arXiv:2504.14024</a>
-            <a href="https://arxiv.org/pdf/2504.14024.pdf">PDF</a>
+            [<a href="https://arxiv.org/abs/2504.14024">arXiv</a>] [<a href="https://arxiv.org/pdf/2504.14024.pdf">PDF</a>]
         </div>
     </div>
 
